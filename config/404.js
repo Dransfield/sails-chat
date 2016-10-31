@@ -23,6 +23,7 @@ module.exports[404] = function pageNotFound(req, res) {
 
   // If the user-agent wants a JSON response, send json
   if (req.wantsJSON) {
+	  if (err) {sails.log.debug("returning jason");}
     return res.json(result, result.status);
   }
 

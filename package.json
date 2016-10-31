@@ -16,6 +16,9 @@
         "debug": "node debug app.js"
     },
     "main": "app.js",
+     "engines": {
+    "node": "6.9.1"
+	},	
     "repository": "",
     "author": "Ajey",
     "license": ""

@@ -8,8 +8,8 @@
  */
 
 module.exports[404] = function pageNotFound(req, res) {
-
-  /*
+ sails.log.error("404 error mate");
+   /*
    * NOTE: This function is Sails middleware-- that means that not only do `req` and `res`
    * work just like their Express equivalents to handle HTTP requests, they also simulate
    * the same interface for receiving socket messages.

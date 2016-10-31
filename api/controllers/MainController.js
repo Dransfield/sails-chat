@@ -62,7 +62,8 @@ var MainController = {
             req.session.user = usr;
             res.send(usr);
           } else {
-            res.send(400, { error: "Wrong password "});
+            //res.send(400, { error: "Wrong password "});
+          sails.log.error("Wrong Password");
           }
         } 
         else {

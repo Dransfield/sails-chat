@@ -62,12 +62,17 @@ var MainController = {
             req.session.user = usr;
             res.send(usr);
           } else {
-            //res.send(400, { error: "Wrong password "});
-          sails.log.error("Wrong Password");
+           res.send(404,{ error: "Wrong password "});
+          return res.badRequest(
+   'Transaction limit exceeded. Please try again with an amount less than $500.'
+ );
           }
         } 
         else {
-          res.send(404, { error: "User not found "});
+          
+         res.notFound();
+         res.send( 404,{ error: 'User not found '});
+          
         }
       }
     });

@@ -23,10 +23,11 @@ module.exports[404] = function pageNotFound(req, res) {
 
   // If the user-agent wants a JSON response, send json
   if (req.wantsJSON) {
-	  if (err) {sails.log.debug("returning jason");}
-    return res.json(result, result.status);
+	 sails.log.debug("returning jason new");
+    return res.json({error:"404 error"});
+    //return res.json(result, result.status);
   }
-
+	sails.log.debug("still in 404.js mate");
   res.status(result.status);
   res.render(viewFilePath, function (err) {
     // If the view doesn't exist, or an error occured, send json
